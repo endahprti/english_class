@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("kampus.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar {
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 26px;
+  color: white;
+  font-weight: bold;
+  width: 120px;
+  cursor: pointer;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a {
+  color: beige;
+  text-transform: uppercase;
+}
+
+.navbar ul li::after {
+  content: "";
+  height: 3px;
+  width: 0%;
+  background: white;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+.image {
+  width: 30%;
+  height: 40%;
+  position: absolute;
+  top: 30%;
+  bottom: 0;
+  left: 13%;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 23%;
+  transform: translateY(20%);
+}
+
+.content {
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: rgb(240, 234, 174);
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.content h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 80px;
+  margin-top: 80px;
+  margin-left: 40%;
+  text-align: left;
+}
+
+.content p {
+  margin: 20px auto;
+  margin-left: 40%;
+  font-weight: 100;
+  line-height: 25px;
+  text-align: left;
+}
+
+button {
+  width: 200px;
+  left: 5%;
+  margin: 20px 10px;
+  padding: 15px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: rgb(81, 81, 88);
+  color: rgb(240, 234, 174);
+  border: 3px solid rgb(81, 81, 88);
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+button a {
+  color: white;
+}
+
+span {
+  height: 100%;
+  width: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  position: absolute;
+  border-radius: 10px;
+  background: rgb(81, 81, 88);
+  transition: 0, 5s;
+}
+
+button:hover span {
+  width: 100%;
+}
+
+button:hover {
+  border: none;
+}
+
+@media (max-width: 600px) {
+  .content,
+  .image,
+  .main,
+  .logo,
+  .navbar {
+    width: 50%;
+    float: none;
+  }
+}
